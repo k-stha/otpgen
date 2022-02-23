@@ -2,10 +2,10 @@
 
 """Generates TOTP codes and changes every 30 seconds."""
 
-from os.path import basename
 import sys
 import time
 
+from os.path import basename
 from otpgen import totp
 
 
@@ -42,7 +42,7 @@ while i < len(sys.argv):
         SECRET = sys.stdin.read()
 
     else:
-        SECRET = sys.argv[1]
+        SECRET = sys.argv[i]
 
     i += 1
 
