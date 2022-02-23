@@ -16,7 +16,7 @@ def return_help(script_name):
         + script_name
         + " [OPTION...] [OTP Secret Code]\n\nOptions:\n"
         + "  -h, --help            Print this help menu\n"
-        + "  --stdin               Take TOTP code from standard input"
+        + "  -, --stdin            Take TOTP code from standard input"
     )
 
 
