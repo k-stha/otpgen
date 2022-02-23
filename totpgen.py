@@ -65,6 +65,7 @@ while True:  # Continue unless the user stops it
         time.sleep(0.1)
 
     except KeyboardInterrupt:
+        print(end="\n")
         sys.exit()
 
     except Exception:
