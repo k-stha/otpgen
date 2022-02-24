@@ -15,7 +15,7 @@ def hotp(secret, interval):
     digest = hmac.new(key, counter, hashlib.sha1).digest()
     offset = digest[19] & 15
     unpk = struct.unpack(">I", digest[offset:offset + 4])
-    code = (unpk[0] & 0x7FFFFFFF) % (10 ** 6)
+    code = (unpk[0] & 0x7FFFFFFF) % 1000000  # (10 ** 6)
     return code
 
 
