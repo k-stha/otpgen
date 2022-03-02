@@ -29,7 +29,7 @@ if len(sys.argv) == 1:
     print(display_help)
     sys.exit(1)
 
-i = 0
+i = 1
 
 while i < len(sys.argv):
     arg = sys.argv[i]
