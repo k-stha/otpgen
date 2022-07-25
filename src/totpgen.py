@@ -6,7 +6,7 @@ import sys
 import time
 
 from os.path import basename
-from otpgen import totp
+from otpgenlib.otpgen import totp
 
 
 def return_help(script_name):

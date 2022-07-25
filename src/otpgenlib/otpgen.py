@@ -14,11 +14,11 @@ def hotp(secret, interval):
     counter = struct.pack(">Q", interval)
     digest = hmac.new(key, counter, hashlib.sha1).digest()
     offset = digest[19] & 15
-    unpk = struct.unpack(">I", digest[offset:offset + 4])
-    code = (unpk[0] & 0x7FFFFFFF) % 1000000  # (10 ** 6)
+    unpk = struct.unpack(">I", digest[offset:offset + 4])[0]
+    code = (unpk & 0x7FFFFFFF) % 1000000  # (10 ** 6)
     return code
 
 
 def totp(secret, totp_time):
     """Generate TOTP code."""
-    return hotp(secret, interval=int(time.time()) // totp_time)
+    return hotp(secret, int(time.time()) // totp_time)
