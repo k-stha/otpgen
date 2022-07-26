@@ -2,7 +2,18 @@
 
 Module for generating HOTP and TOTP codes
 
-## Usage
+## Table of Contents
+
+- [Description](#description)
+  - [Library Usage](#library-usage)
+  - [Script Usage](#script-usage)
+- [Contribution Guidelines](#contribution-guidelines)
+
+## Description
+
+This repository contains a library called otpgen which could be used to obtain
+HOTP and TOTP codes, and an example script called totpgen.py, which is created
+to demonstrate what the library can be used to create.
 
 ### Library Usage
 
@@ -30,11 +41,15 @@ $ # OR
 $ echo "<TOTP_SECRET>" | totpgen.py -
 ```
 
-RECOMMENDATION: Encrypt the file with the TOTP Secret using tools like GnuPG,
-and pass its contents to the scripts.
+**RECOMMENDATION:** Encrypt the file with the TOTP Secret using tools like
+GnuPG, and pass its contents to the scripts.
 
 ```shell
 $ totpgen.py "$(gpg -qd /file/with/totp/secret)"
 $ # OR
 $ gpg -qd /file/with/totp/secret | totpgen.py -
 ```
+
+## Contribution Guidelines
+
+See [CONTRIBUTING.md](CONTRIBUTING.md)
