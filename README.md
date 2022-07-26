@@ -10,7 +10,7 @@ To generate HOTP code from library:
 
 ```python
 >>> from otpgenlib.otpgen import hotp
->>> totp("<HOTP_SECRET>", <COUNT>)
+>>> hotp("<HOTP_SECRET>", <COUNT>)
 ```
 
 To generate TOTP code from library:
